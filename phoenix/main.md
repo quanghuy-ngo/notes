@@ -152,8 +152,9 @@ jupyter notebook --no-browser --port=${port} --ip=${node}
 source deactivate
 ```
 
-When the job starts running, you look in the generated log file and follow the instructions. This will get the Jupyter Notebook on the Phoenix node to run in your browser.
-In the log file, ssh -N -L 8240:r25-n25:8240 a1798528@phoenix.rc.adelaide.edu.au
+When the job starts running, you look in the generated log file and follow the instructions. This will get the Jupyter Notebook on the Phoenix node to run in your browser.\
+In the log file on HPC we generated copy the command like: "ssh -N -L 8240:r25-n25:8240 axxxxxxxx@phoenix-login1.adelaide.edu.au"\
+Open a terminal on local machine and run the above command (authentication step might required). After that in your browser access to the url given in the log file on phoenix. The url should similar to this: "http://127.0.0.1:xxxx/?token=703b02614d1866a4f722008af39c6b1b294505bxxxxxxxxxxx"
 
 ## Using Job Arrays
 Job arrays are a useful feature to allow you to submit many (ideally) small tasks, allowing for true multiprocessing. Often this is done by splitting a file into many smaller files. Implementation is best explained with an example, found on phoenix at `/apps/examples/array_job/`. A more minimal example is also present at https://github.cs.adelaide.edu.au/a1720858/SecurityAnalytics/tree/master/examples/job_array
