@@ -137,7 +137,7 @@ cluster=$(hostname -f | awk -F"." '{print $2}')
 # print tunneling instructions jupyter-log
 echo -e "\
 Use this command in your terminal:\
-ssh -N -L ${port}:${node}:${port} ${user}@${cluster}phoenix.rc.adelaide.edu.au\
+ssh -N -L ${port}:${node}:${port} ${user}@phoenix-login1.adelaide.edu.au\
 
 Use a Browser on your local machine to go to:\
 localhost:${port}  (prefix w/ https:// if using password)
@@ -153,6 +153,7 @@ source deactivate
 ```
 
 When the job starts running, you look in the generated log file and follow the instructions. This will get the Jupyter Notebook on the Phoenix node to run in your browser.
+In the log file, ssh -N -L 8240:r25-n25:8240 a1798528@phoenix.rc.adelaide.edu.au
 
 ## Using Job Arrays
 Job arrays are a useful feature to allow you to submit many (ideally) small tasks, allowing for true multiprocessing. Often this is done by splitting a file into many smaller files. Implementation is best explained with an example, found on phoenix at `/apps/examples/array_job/`. A more minimal example is also present at https://github.cs.adelaide.edu.au/a1720858/SecurityAnalytics/tree/master/examples/job_array
