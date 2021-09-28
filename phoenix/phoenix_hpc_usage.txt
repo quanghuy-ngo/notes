@@ -1,0 +1,42 @@
+Login: 
+$ ssh a1798528@phoenix-login1.adelaide.edu.au
+
+Go to personal directory:
+$ cd /hpcfs/users/a1798528
+
+submit batch job:
+$ sbatch j2.sh
+
+take queue information 
+squeue -u $USER
+
+take computation information: 
+rcstat JOBID
+
+
+
+print out terminal:
+cat slurm-1724717.out
+
+
+upload file from local machine:
+
+scp -r phoenix/bert_extract.py a1798528@phoenix-login1.adelaide.edu.au://hpcfs/users/a1798528/BERT
+
+
+
+download file to local machine:
+$ scp -r a1798528@phoenix-login1.adelaide.edu.au://hpcfs/users/a1798528/BERT/output .
+
+create virtual envinronment:
+$ virtualenv -p python3 /hpcfs/users/a1798528/BERT/env/new
+
+
+open virtual envinronment:
+source env/new/bin/activate
+
+Error: python: error while loading shared libraries: libpython3.6m.so.1.0: cannot open shared object file: No such file or directory
+solve: module load Python/3.6.1-foss-2016b
+
+signout from phoenix:
+$ quit
