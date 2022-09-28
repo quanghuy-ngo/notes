@@ -34,15 +34,15 @@ echo ":: Python loaded";
 echo "environment loaded"
 echo "run train"
 #python3 builddygraph.py $a $b $c
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 0 1000 0 &
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 1000 1000 0 &
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 2000 1000 0 &
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 3000 1000 0 &
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 4000 1000 0 &
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 5000 1000 0 &
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 6000 1000 0 &
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 7000 1000 0 &
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 8000 1000 0 &
-srun --ntasks 1 --exclusive -c 1 python3 monte_carlo_simulation_par.py $a 9000 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 0 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 1000 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 2000 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 3000 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 4000 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 5000 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 6000 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 7000 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 8000 1000 0 &
+srun --ntasks 1 --exclusive -c 2 python3 monte_carlo_simulation_par.py $a 9000 1000 0 &
 wait
 python3 combine_mts_par.py $a 10 1000
