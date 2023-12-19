@@ -1,5 +1,5 @@
 Login: 
-$ ssh a1798528@phoenix-login1.adelaide.edu.au
+$ ssh a1798528@p2-log-1.hpc.adelaide.edu.au
 
 Go to personal directory:
 $ cd /hpcfs/users/a1798528
@@ -21,12 +21,12 @@ cat slurm-1724717.out
 
 upload file from local machine:
 
-scp -r phoenix/bert_extract.py a1798528@phoenix-login1.adelaide.edu.au://hpcfs/users/a1798528/BERT
+scp -r phoenix/bert_extract.py a1798528@p2-log-1.hpc.adelaide.edu.au://hpcfs/users/a1798528/BERT
 
 
 
 download file to local machine:
-$ scp -r a1798528@phoenix-login1.adelaide.edu.au://hpcfs/users/a1798528/BERT/output .
+$ scp -r a1798528@phoenix-login1.adelaide.edu.au://gpfs/users/a1798528/BERT/output .
 
 create virtual envinronment:
 $ virtualenv -p python3 /hpcfs/users/a1798528/BERT/env/new
